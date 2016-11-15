@@ -1,0 +1,32 @@
+.pi-third-party-license {
+  background: #1ab394 none repeat scroll 0 0;
+  border: 1px solid #000000;
+  opacity: 0.4 ;
+  position: absolute;
+}
+
+.pi-third-party-license-agreed:after,
+.pi-third-party-license-rejected:after  {
+  margin-right: 1em;
+  margin-top: 0.5em;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.pi-third-party-licence-agreed:after {
+  color: green;
+  content: "/f058";
+}
+.pi-third-party-license-rejected:after {
+  content:"f111" ;
+  color: green;
+}
+
+.image-wrapper img {
+  width:100%;
+}
+
+.image-wrapper .image-wrapper--description {
+  color: #000000;
+}

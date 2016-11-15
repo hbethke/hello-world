@@ -1,0 +1,1272 @@
+<!-- Viele Codefragmente in product-title-info-form.xqm waren auskommentiert. Zur eventuellen späteren Wiederverwendung wurden diese Codefragmente in diese Datei hier ausgelagert -->
+
+<!--                <div class="col-sm-12">
+                  <div class="hr-line-dashed"/>
+                  <h2>Wiederverwendungen (allgemein)</h2>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="form-group col-sm-12">
+                      <label class=" control-label"> Wiederverwendungen mit <u>Informationen</u> (Liste oder Metadaten) und HighResDaten bzw.
+                        Mutterdateien:
+                      </label>
+                      <br />
+                      <div class="col-sm-6 i-checks">
+                        <div class="col-sm-3">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Wiederverwendungen-mit-Informationen"/> Ja </label>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Wiederverwendungen-mit-Informationen"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                      <label class=" control-label"> Wiederverwendungen ohne Informationen, aber mit HighResDaten bzw. Mutterdateien:
+                      </label>
+                      <br />
+                      <div class="col-sm-6 i-checks">
+                        <div class="col-sm-3">
+                          <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Wiederverwendungen-ohne-Informationen"/> Ja </label>
+                        </div>
+                        <div class="col-sm-4">
+                          <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Wiederverwendungen-ohne-Informationen"/> Nein </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                      <label class=" control-label"> Wiederverwendungen von PDFs mit Informationen (Bestell-Assetliste):
+                      </label>
+                      <br />
+                      <div class="col-sm-6 i-checks">
+                        <div class="col-sm-3">
+                          <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Wiederverwendungen-mit-Informationen-PDF"/> Ja </label>
+                        </div>
+                        <div class="col-sm-4">
+                          <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Wiederverwendungen-mit-Informationen-PDF"/> Nein </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                      <label class=" control-label"> Wiederverwendungen von PDFs ohne Informationen (ohne Bestell-Assetliste):
+                      </label>
+                      <br />
+                      <div class="col-sm-6 i-checks">
+                        <div class="col-sm-3">
+                          <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Wiederverwendungen-ohne-Informationen-PFD"/> Ja </label>
+                        </div>
+                        <div class="col-sm-4">
+                          <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Wiederverwendungen-ohne-Informationen-PDF"/> Nein </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                      <label class="control-label">Wiederverwendungen aus folgenden Titeln:</label>
+                      <br />
+                      <div class="col-sm-6">
+                        <div class="input-group">
+                          <select name="Wiederverwendung-aus-Titel" class="form-control chosen-select" multiple="" tabindex="-1" style="width: 100% !important;">
+                            {
+                              for $produktnummer in collection('prisma-mock')/Produkte/Produkt/Produktnummer
+                              return if (not(empty($produktnummer)))
+                              then <option value="{$produktnummer}">{$produktnummer}</option>
+                              else ()
+                            }
+                          </select>
+                          <div class=" chosen-container chosen-container-multi chosen-with-drop chosen-container-active" style="display: none; width: 100% !important;" title="">
+                            <ul class="chosen-choices">
+                              {
+                                let $count := 0
+                                for $produkt-x in collection('prisma-mock')/Produkte/Produkt
+                                let $count := $count + 1
+                                return if (not(empty($produkt-x/Produktnummer)))
+                                then <li class="search-choice">
+                                    <span> {$produkt-x/Produktnummer} </span>
+                                    <a class="search-choice-close" data-option-array-index="{$count}"></a>
+                                  </li>
+                                else ()
+                              }
+
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>-->
+                                
+<!---------------------------------------------------------------------------------------------------------------------->           
+                                
+                 <!--li class="">
+              <a shape="rect" data-toggle="tab" href="#tab-3"> Nutzungsumfang </a>
+            </li-->
+            
+<!---------------------------------------------------------------------------------------------------------------------->            
+                        
+            <!--li class="">
+              <a shape="rect" data-toggle="tab" href="#tab-5"> Fotomaterial </a>
+            </li>
+            <li class="">
+              <a shape="rect" data-toggle="tab" href="#tab-6"> Grafik-/Illustrationsmaterial </a>
+            </li-->    
+            
+<!---------------------------------------------------------------------------------------------------------------------->
+            
+            <!--div class="tab-pane" id="tab-3">
+            {(: Das können wir vielleicht bei der Lizensierung noch verwenden, oder? :)}
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="form-group col-sm-12">
+                      <label class=" control-label"><h2> Nutzungsumfang für die Reihe: </h2>
+                      </label>
+                      <div class="i-checks">
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Print-Schülerbuch" name="Nutzungsumfang-Reihe"/> Print (Schülerbuch) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox" value="E-book-Schüler" name="Nutzungsumfang-Reihe"/> E-book (Schüler) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Lektüre-print" name="Nutzungsumfang-Reihe"/> Lektüre (print) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Scook-für-Schüler" name="Nutzungsumfang-Reihe"/> scook für Schüler (Materialspalte) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="App" name="Nutzungsumfang-Reihe"/> App </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Fachliteratur" name="Nutzungsumfang-Reihe"/> Fachliteratur </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Zeitung" name="Nutzungsumfang-Reihe"/> Zeitung </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Wörterbuch" name="Nutzungsumfang-Reihe"/> Wörterbuch </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox" value="Arbeitsheft-print" name="Nutzungsumfang-Reihe"/> Arbeitsheft print </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox" value="Arbeitsheft-digital-cornelsen" name="Nutzungsumfang-Reihe"/> Arbeitsheft digital (cornelsen.de) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Arbeitsheft-digital-scook-drucken" name="Nutzungsumfang-Reihe"/> Arbeitsheft digital (scook Materialspalte + drucken) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Arbeitsheft-digital-scook-download)" name="Nutzungsumfang-Reihe"/> Arbeitsheft digital (scook Materialspalte + download) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Arbeitsheft-digital-CD-DVD" name="Nutzungsumfang-Reihe"/> Arbeitsheft digital (CD/DVD) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Arbeitsheft-digital-gratis" name="Nutzungsumfang-Reihe"/> Arbeitsheft digital (gratis) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Arbeitsblätter-online" name="Nutzungsumfang-Reihe"/> Arbeitsblätter online für Kursleiter + Kursteilnehmer </label>
+                        </div>
+                        <br />
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Print-Lehrerbuch" name="Nutzungsumfang-Reihe"/> Print (Lehrerbuch) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="E-book-Lehrer" name="Nutzungsumfang-Reihe"/> E-book (Lehrer) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="UMA-CD-DVD" name="Nutzungsumfang-Reihe"/> UMA (CD/DVD) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="UMA-scook" name="Nutzungsumfang-Reihe"/> UMA (scook) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="UMA-download" name="Nutzungsumfang-Reihe"/> UMA (download/cornelsen.de) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Lösungsbuch" name="Nutzungsumfang-Reihe"/> Lösungsbuch/-heft </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Aktualitätendienst" name="Nutzungsumfang-Reihe"/> Aktualitätendienst </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Werbung-Produkt" name="Nutzungsumfang-Reihe"/> Werbung/Marketing - Produkt </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Print-Handreichungen" name="Nutzungsumfang-Reihe"/> Print Handreichungen </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Digitale-Handreichungen-CD-DVD" name="Nutzungsumfang-Reihe"/> Digitale Handreichungen (CD/DVD) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="UMA-Handreichungen-CD-DVD" name="Nutzungsumfang-Reihe"/> UMA Handreichungen (CD/DVD) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="UMA-Handreichungen-scook-drucken" name="Nutzungsumfang-Reihe"/> UMA Handreichungen (scook + drucken) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="UMA-Handreichungen-scook-drownload" name="Nutzungsumfang-Reihe"/> UMA Handreichungen (scook + drownload) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Handreichungen-scook-drucken" name="Nutzungsumfang-Reihe"/> Handreichungen (scook Materialspalte + drucken) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Handreichungen-scook-download" name="Nutzungsumfang-Reihe"/> Handreichungen (scook Materialspalte + download) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Powerpoint" name="Nutzungsumfang-Reihe"/> Powerpoint </label>
+                        </div>
+                        <br />
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Kopiervorlagen-print" name="Nutzungsumfang-Reihe"/> Kopiervorlagen (print) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Kopiervorlagen-CD-DVD" name="Nutzungsumfang-Reihe"/> Kopiervorlagen (CD/DVD) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Kopiervorlagen-download" name="Nutzungsumfang-Reihe"/> Kopiervorlagen (download/cornelsen.de) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Kopiervorlagen-scook-drucken" name="Nutzungsumfang-Reihe"/> Kopiervorlagen (scook Materialspalte + drucken) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Kopiervorlagen-scook-download" name="Nutzungsumfang-Reihe"/> Kopiervorlagen (scook Materialspalte + download) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="UMA-Kopiervorlagen-scook-download" name="Nutzungsumfang-Reihe"/> UMA Kopiervorlagen (scook + download) </label>
+                        </div>
+                        <br />
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Film-DVD" name="Nutzungsumfang-Reihe"/> Film Material (DVD) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Film-UMA-DVD-CD" name="Nutzungsumfang-Reihe"/> Film Material (UMA/DVD/CD) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Film-UMA-scook-streaming)" name="Nutzungsumfang-Reihe"/> Film Material (UMA/scook - streaming) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Film-UMA-scook-offline" name="Nutzungsumfang-Reihe"/> Film Material (UMA/scook - offline) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Film-scook-Schüler" name="Nutzungsumfang-Reihe"/> Film Material (Materialspalte Schüler) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Film-download" name="Nutzungsumfang-Reihe"/> Film Material (download/cornelsen.de) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Audio-CD-DVD" name="Nutzungsumfang-Reihe"/> Audio Material (CD/DVD) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Audio-UMA-DVD-CD" name="Nutzungsumfang-Reihe"/> Audio Material (UMA/DVD/CD) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Audio-UMA-scook-streaming" name="Nutzungsumfang-Reihe"/> Audio Material (UMA/scook - streaming) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Audio-UMA-scook-offline" name="Nutzungsumfang-Reihe"/> Audio Material (UMA/scook - offline) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Audio-scook-Schüler" name="Nutzungsumfang-Reihe"/> Audio Material (Materialspalte Schüler) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Audio-download" name="Nutzungsumfang-Reihe"/> Audio Material (download/cornelsen.de) </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="hr-line-dashed"/>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="form-group col-sm-12">
+                      <label class=" control-label"><h2> Nutzungsumfang für den Titel: </h2>
+                      </label>
+                      <div class="i-checks">
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Print-Schülerbuch" name="Nutzungsumfang-Titel"/> Print (Schülerbuch) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox" value="E-book-Schüler" name="Nutzungsumfang-Titel"/> E-book (Schüler) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Lektüre-print" name="Nutzungsumfang-Titel"/> Lektüre (print) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Scook-für-Schüler" name="Nutzungsumfang-Titel"/> scook für Schüler (Materialspalte) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="App" name="Nutzungsumfang-Titel"/> App </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Fachliteratur" name="Nutzungsumfang-Titel"/> Fachliteratur </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Zeitung" name="Nutzungsumfang-Titel"/> Zeitung </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Wörterbuch" name="Nutzungsumfang-Titel"/> Wörterbuch </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox" value="Arbeitsheft-print" name="Nutzungsumfang-Titel"/> Arbeitsheft print </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox" value="Arbeitsheft-digital-cornelsen" name="Nutzungsumfang-Titel"/> Arbeitsheft digital (cornelsen.de) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Arbeitsheft-digital-scook-drucken" name="Nutzungsumfang-Titel"/> Arbeitsheft digital (scook Materialspalte + drucken) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Arbeitsheft-digital-scook-download)" name="Nutzungsumfang-Titel"/> Arbeitsheft digital (scook Materialspalte + download) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Arbeitsheft-digital-CD-DVD" name="Nutzungsumfang-Titel"/> Arbeitsheft digital (CD/DVD) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Arbeitsheft-digital-gratis" name="Nutzungsumfang-Titel"/> Arbeitsheft digital (gratis) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Arbeitsblätter-online" name="Nutzungsumfang-Titel"/> Arbeitsblätter online für Kursleiter + Kursteilnehmer </label>
+                        </div>
+                        <br />
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Print-Lehrerbuch" name="Nutzungsumfang-Titel"/> Print (Lehrerbuch) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="E-book-Lehrer" name="Nutzungsumfang-Titel"/> E-book (Lehrer) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="UMA-CD-DVD" name="Nutzungsumfang-Titel"/> UMA (CD/DVD) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="UMA-scook" name="Nutzungsumfang-Titel"/> UMA (scook) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="UMA-download" name="Nutzungsumfang-Titel"/> UMA (download/cornelsen.de) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Lösungsbuch" name="Nutzungsumfang-Titel"/> Lösungsbuch/-heft </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Aktualitätendienst" name="Nutzungsumfang-Titel"/> Aktualitätendienst </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Werbung-Produkt" name="Nutzungsumfang-Titel"/> Werbung/Marketing - Produkt </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Print-Handreichungen" name="Nutzungsumfang-Titel"/> Print Handreichungen </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Digitale-Handreichungen-CD-DVD" name="Nutzungsumfang-Titel"/> Digitale Handreichungen (CD/DVD) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="UMA-Handreichungen-CD-DVD" name="Nutzungsumfang-Titel"/> UMA Handreichungen (CD/DVD) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="UMA-Handreichungen-scook-drucken" name="Nutzungsumfang-Titel"/> UMA Handreichungen (scook + drucken) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="UMA-Handreichungen-scook-drownload" name="Nutzungsumfang-Titel"/> UMA Handreichungen (scook + drownload) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Handreichungen-scook-drucken" name="Nutzungsumfang-Titel"/> Handreichungen (scook Materialspalte + drucken) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Handreichungen-scook-download" name="Nutzungsumfang-Titel"/> Handreichungen (scook Materialspalte + download) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Powerpoint" name="Nutzungsumfang-Titel"/> Powerpoint </label>
+                        </div>
+                        <br />
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Kopiervorlagen-print" name="Nutzungsumfang-Titel"/> Kopiervorlagen (print) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Kopiervorlagen-CD-DVD" name="Nutzungsumfang-Titel"/> Kopiervorlagen (CD/DVD) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Kopiervorlagen-download" name="Nutzungsumfang-Titel"/> Kopiervorlagen (download/cornelsen.de) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Kopiervorlagen-scook-drucken" name="Nutzungsumfang-Titel"/> Kopiervorlagen (scook Materialspalte + drucken) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Kopiervorlagen-scook-download" name="Nutzungsumfang-Titel"/> Kopiervorlagen (scook Materialspalte + download) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="UMA-Kopiervorlagen-scook-download" name="Nutzungsumfang-Titel"/> UMA Kopiervorlagen (scook + download) </label>
+                        </div>
+                        <br />
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Film-DVD" name="Nutzungsumfang-Titel"/> Film Material (DVD) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Film-UMA-DVD-CD" name="Nutzungsumfang-Titel"/> Film Material (UMA/DVD/CD) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Film-UMA-scook-streaming)" name="Nutzungsumfang-Titel"/> Film Material (UMA/scook - streaming) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Film-UMA-scook-offline" name="Nutzungsumfang-Titel"/> Film Material (UMA/scook - offline) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Film-scook-Schüler" name="Nutzungsumfang-Titel"/> Film Material (Materialspalte Schüler) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Film-download" name="Nutzungsumfang-Titel"/> Film Material (download/cornelsen.de) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Audio-CD-DVD" name="Nutzungsumfang-Titel"/> Audio Material (CD/DVD) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Audio-UMA-DVD-CD" name="Nutzungsumfang-Titel"/> Audio Material (UMA/DVD/CD) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Audio-UMA-scook-streaming" name="Nutzungsumfang-Titel"/> Audio Material (UMA/scook - streaming) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Audio-UMA-scook-offline" name="Nutzungsumfang-Titel"/> Audio Material (UMA/scook - offline) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Audio-scook-Schüler" name="Nutzungsumfang-Titel"/> Audio Material (Materialspalte Schüler) </label>
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="control-label"> <input class="form-control" type="checkbox"  value="Audio-download" name="Nutzungsumfang-Titel"/> Audio Material (download/cornelsen.de) </label>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div-->{(:TAB-3 Nutzungsumfang:)}
+            
+<!---------------------------------------------------------------------------------------------------------------------->
+
+<!-- <div class="form-group col-sm-12">
+                                                        <label class=" control-label">  Darunter enthalten ...
+                                                        </label>
+                                                        <div class="col-sm-9"/>
+                                                    </div> -->
+                                                    
+<!---------------------------------------------------------------------------------------------------------------------->
+
+<!--div class="col-sm-4">
+
+                                            </div-->
+                                            
+<!---------------------------------------------------------------------------------------------------------------------->
+
+<!--
+                        <div class="form-group col-sm-12">
+                            <label class=" control-label">Weitere ISBN der Reihe</label>
+                            <div class="">
+                                <input type="text" class="form-control" placeholder="978-3-506-72963-1"/>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <div class="col-sm-offset-4 ">
+                                <input type="text" class="form-control" placeholder="978-3-506-72963-2"/>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <div class="col-sm-offset-4 ">
+                                <input type="text" class="form-control" placeholder="978-3-506-72963-3"/>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <div class="col-sm-offset-4 ">
+                                <input type="text" class="form-control" placeholder="978-3-506-72963-4"/>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <div class="col-sm-offset-4 ">
+                                <input type="text" class="form-control" placeholder="978-3-506-72963-5"/>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <div class="col-sm-offset-4 ">
+                                <input type="text" class="form-control" placeholder="978-3-506-72963-6"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-sm-12">
+                            <label class=" control-label">Davon 1:1 Wiederverwendung in</label>
+                            <div class="">
+                                <input type="text" class="form-control" placeholder="978-3-506-72963-1"/>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <div class="col-sm-offset-4 ">
+                                <input type="text" class="form-control" placeholder="978-3-506-72963-2"/>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <div class="col-sm-offset-4 ">
+                                <input type="text" class="form-control" placeholder="978-3-506-72963-3"/>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <div class="col-sm-offset-4 ">
+                                <input type="text" class="form-control" placeholder="978-3-506-72963-4"/>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <div class="col-sm-offset-4 ">
+                                <input type="text" class="form-control" placeholder="978-3-506-72963-5"/>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <div class="col-sm-offset-4 ">
+                                <input type="text" class="form-control" placeholder="978-3-506-72963-6"/>
+                            </div>
+                        </div>
+                        -->
+                        
+<!---------------------------------------------------------------------------------------------------------------------->
+
+<div class="tab-pane" id="tab-5">
+              <div class="panel-body">
+                <div class="col-sm-12">
+                  <h2> Fotomaterial </h2>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="form-group col-sm-12">
+                      <label class=" control-label"> Grobe Anzahl der Fotos im Produkt: </label>
+                      <div class="col-sm-6 input-group m-b">
+                        <input name="Anzahl-Fotos" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                        <span class="input-group-addon"> Foto(s) </span>
+                      </div>
+                    </div>
+                    
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label">  Darunter Standard Kategorie 1 (z.B. Shutterstock) Fotos?
+                      </label>
+                      <br />
+                      <div class="col-sm-3">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Foto-Kategorie-1"/> Ja </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Foto-Kategorie-1"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label"> Ungefähre Anzahl: </label>
+                      <div class="">
+                        <div class="input-group m-b">
+                          <input name="Anzahl-Kategorie-1-Fotos" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                          <span class="input-group-addon"> Foto(s) </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label">  Darunter Standard Kategorie 2 (z.B.: Corbis, Mauritius) Fotos?
+                      </label>
+                      <br />
+                      <div class="col-sm-3">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Foto-Kategorie-2"/> Ja </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Foto-Kategorie-2"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label"> Ungefähre Anzahl: </label>
+                      <div class="">
+                        <div class="input-group m-b">
+                          <input name="Anzahl-Kategorie-2-Fotos" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                          <span class="input-group-addon"> Foto(s) </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label">  Darunter Standard Kategorie 3 (z.B. Bridgmann, bpk) Fotos?
+                      </label>
+                      <br />
+                      <div class="col-sm-3">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Foto-Kategorie-3"/> Ja </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Foto-Kategorie-3"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label"> Ungefähre Anzahl: </label>
+                      <div class="">
+                        <div class="input-group m-b">
+                          <input name="Anzahl-Kategorie-3-Fotos" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                          <span class="input-group-addon"> Foto(s) </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label">  Darunter <u>Nicht</u>-Standard Kategorie 1 ( unter 10 Euro) Fotos?
+                      </label>
+                      <br />
+                      <div class="col-sm-3">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Foto-Nicht-Kategorie-1"/> Ja </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Foto-Nicht-Kategorie-1"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label"> Ungefähre Anzahl: </label>
+                      <div class="">
+                        <div class="input-group m-b">
+                          <input name="Anzahl-Nicht-Kategorie-1-Fotos" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                          <span class="input-group-addon"> Foto(s) </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label">  Darunter <u>Nicht</u>-Standard Kategorie 2 (unter 50 Euro) Fotos?
+                      </label>
+                      <br />
+                      <div class="col-sm-3">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Foto-Nicht-Kategorie-2"/> Ja </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Foto-Nicht-Kategorie-2"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label"> Ungefähre Anzahl: </label>
+                      <div class="">
+                        <div class="input-group m-b">
+                          <input name="Anzahl-Nicht-Kategorie-2-Fotos" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                          <span class="input-group-addon"> Foto(s) </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label">  Darunter <u>Nicht</u>-Standard Kategorie 3 (unter 100 Euro) Fotos?
+                      </label>
+                      <br />
+                      <div class="col-sm-3">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Foto-Nicht-Kategorie-3"/> Ja </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Foto-Nicht-Kategorie-3"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label"> Ungefähre Anzahl: </label>
+                      <div class="">
+                        <div class="input-group m-b">
+                          <input name="Anzahl-Nicht-Kategorie-3-Fotos" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                          <span class="input-group-addon"> Foto(s) </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label">  Darunter <u>Nicht</u>-Standard Kategorie 4 (nach MFM und höher) Fotos?
+                      </label>
+                      <br />
+                      <div class="col-sm-3">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Foto-Nicht-Kategorie-4"/> Ja </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Foto-Nicht-Kategorie-4"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label"> Ungefähre Anzahl: </label>
+                      <div class="">
+                        <div class="input-group m-b">
+                          <input name="Anzahl-Nicht-Kategorie-4-Fotos" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                          <span class="input-group-addon"> Foto(s) </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label">  Darunter <u>Autoren-</u> bzw. <u>Redaktions-</u>Fotos (keine Screenshots etc.)?
+                      </label>
+                      <br />
+                      <div class="col-sm-3">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Foto-Autoren"/> Ja </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Foto-Authoren"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label"> Ungefähre Anzahl: </label>
+                      <div class="">
+                        <div class="input-group m-b">
+                          <input name="Anzahl-Autoren-Fotos" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                          <span class="input-group-addon"> Foto(s) </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label">  Darunter Standard: Verwendung von <u>Pressebildern</u>?
+                      </label>
+                      <br />
+                      <div class="col-sm-3">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Foto-Pressebilder-Standard"/> Ja </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Foto-Pressebilder-Standard"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label"> Ungefähre Anzahl: </label>
+                      <div class="">
+                        <div class="input-group m-b">
+                          <input name="Anzahl-Foto-Pressebilder-Standard" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                          <span class="input-group-addon"> Foto(s) </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label">  Darunter <u>Nicht-</u>Standard: Verwendung von <u>Pressebildern</u>?
+                      </label>
+                      <br />
+                      <div class="col-sm-3">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Foto-Pressebilder-Nicht-Standard"/> Ja </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Foto-Pressebilder-Nicht-Standard"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label"> Ungefähre Anzahl: </label>
+                      <div class="">
+                        <div class="input-group m-b">
+                          <input name="Anzahl-Foto-Pressebilder-Nicht-Standard" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                          <span class="input-group-addon"> Foto(s) </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label">  Darunter Standard: Darstellung von <u>Kunstwerken</u>?
+                      </label>
+                      <br />
+                      <div class="col-sm-3">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Foto-Kunstwerke-Standard"/> Ja </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Foto-Kunstwerke-Standard"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label"> Ungefähre Anzahl: </label>
+                      <div class="">
+                        <div class="input-group m-b">
+                          <input name="Anzahl-Foto-Kunstwerke-Standard" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                          <span class="input-group-addon"> Foto(s) </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label">  Darunter <u>Nicht-</u>Standard: Darstellung von <u>Kunstwerken</u>?
+                      </label>
+                      <br />
+                      <div class="col-sm-3">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Foto-Kunstwerke-Nicht-Standard"/> Ja </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Foto-Kunstwerke-Nicht-Standard"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label"> Ungefähre Anzahl: </label>
+                      <div class="">
+                        <div class="input-group m-b">
+                          <input name="Anzahl-Foto-Kunstwerke-Nicht-Standard" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                          <span class="input-group-addon"> Foto(s) </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label">  Darunter <u>Auftrags-</u>Fotos <u>ohne</u> Personen?
+                      </label>
+                      <br />
+                      <div class="col-sm-3">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Foto-Auftrag-ohne-Person"/> Ja </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Foto-Auftrag-ohne-Person"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label"> Ungefähre Anzahl: </label>
+                      <div class="">
+                        <div class="input-group m-b">
+                          <input name="Anzahl-Foto-Auftrag-ohne-Person" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                          <span class="input-group-addon"> Foto(s) </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label">  Darunter <u>Auftrags-</u>Fotos <u>mit</u> Personen?
+                      </label>
+                      <br />
+                      <div class="col-sm-3">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Foto-Auftrag-mit-Person"/> Ja </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Foto-Auftrag-mit-Person"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label"> Ungefähre Anzahl: </label>
+                      <div class="">
+                        <div class="input-group m-b">
+                          <input name="Anzahl-Foto-Auftrag-mit-Person" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                          <span class="input-group-addon"> Foto(s) </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>                  
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane" id="tab-6">
+              <div class="panel-body">
+                <div class="col-sm-12">
+                  <h2> Grafik- bzw. Illustrationsmaterial </h2>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="form-group col-sm-12">
+                      <label class=" control-label"> Grobe Anzahl der Grafiken bzw. des Illustrationsmaterials im Produkt: </label>
+                      <div class="col-sm-6 input-group m-b">
+                        <input name="Anzahl-Fotos" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                        <span class="input-group-addon"> Foto(s) </span>
+                      </div>
+
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label">  Darunter Standard Kategorie 1 (z.B. Shutterstock) Grafiken/Illustrationen?
+                      </label>
+                      <br />
+                      <div class="col-sm-3">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Grafik-Kategorie-1"/> Ja </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Grafik-Kategorie-1"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label"> Ungefähre Anzahl: </label>
+                      <div class="">
+                        <div class="input-group m-b">
+                          <input name="Anzahl-Kategorie-1-Grafiken" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                          <span class="input-group-addon"> Grafik(en) </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label">  Darunter Standard Kategorie 2 (z.B.: Corbis, Mauritius) Grafiken/Illustrationen?
+                      </label>
+                      <br />
+                      <div class="col-sm-3">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Grafik-Kategorie-2"/> Ja </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Grafik-Kategorie-2"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label"> Ungefähre Anzahl: </label>
+                      <div class="">
+                        <div class="input-group m-b">
+                          <input name="Anzahl-Kategorie-2-Grafiken" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                          <span class="input-group-addon"> Grafik(en) </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label">  Darunter Standard Kategorie 3 (z.B. Bridgmann, bpk) Grafiken/Illustrationen?
+                      </label>
+                      <br />
+                      <div class="col-sm-3">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Grafik-Kategorie-3"/> Ja </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Grafik-Kategorie-3"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label"> Ungefähre Anzahl: </label>
+                      <div class="">
+                        <div class="input-group m-b">
+                          <input name="Anzahl-Kategorie-3-Grafiken" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                          <span class="input-group-addon"> Grafik(en) </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label">  Darunter <u>Nicht</u>-Standard Kategorie 1 ( unter 10 Euro) Grafiken/Illustrationen?
+                      </label>
+                      <br />
+                      <div class="col-sm-3">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Grafik-Nicht-Kategorie-1"/> Ja </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Grafik-Nicht-Kategorie-1"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label"> Ungefähre Anzahl: </label>
+                      <div class="">
+                        <div class="input-group m-b">
+                          <input name="Anzahl-Nicht-Kategorie-1-Grafiken" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                          <span class="input-group-addon"> Grafik(en) </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label">  Darunter <u>Nicht</u>-Standard Kategorie 2 (unter 50 Euro) Grafiken/Illustrationen?
+                      </label>
+                      <br />
+                      <div class="col-sm-3">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Grafik-Nicht-Kategorie-2"/> Ja </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Grafik-Nicht-Kategorie-2"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label"> Ungefähre Anzahl: </label>
+                      <div class="">
+                        <div class="input-group m-b">
+                          <input name="Anzahl-Nicht-Kategorie-2-Grafiken" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                          <span class="input-group-addon"> Grafik(en) </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label">  Darunter <u>Nicht</u>-Standard Kategorie 3 (unter 100 Euro) Grafiken/Illustrationen?
+                      </label>
+                      <br />
+                      <div class="col-sm-3">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Grafik-Nicht-Kategorie-3"/> Ja </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Grafik-Nicht-Kategorie-3"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label"> Ungefähre Anzahl: </label>
+                      <div class="">
+                        <div class="input-group m-b">
+                          <input name="Anzahl-Nicht-Kategorie-3-Grafik" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                          <span class="input-group-addon"> Grafik(en) </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label">  Darunter <u>Nicht</u>-Standard Kategorie 4 (z.B. CartoonSock, Toonpool, Illustrationen aus Büchern) Grafiken/Illustrationen?
+                      </label>
+                      <br />
+                      <div class="col-sm-3">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Grafik-Nicht-Kategorie-4"/> Ja </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Grafik-Nicht-Kategorie-4"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label"> Ungefähre Anzahl: </label>
+                      <div class="">
+                        <div class="input-group m-b">
+                          <input name="Anzahl-Nicht-Kategorie-4-Fotos" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                          <span class="input-group-addon"> Grafik(en) </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label">  Darunter Auftrags-Illustrationen?
+                      </label>
+                      <br />
+                      <div class="col-sm-3">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Auftrag-Illu"/> Ja </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Auftrag-Illu"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label"> Ungefähre Anzahl: </label>
+                      <div class="">
+                        <div class="input-group m-b">
+                          <input name="Anzahl-Auftrag-Illus" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                          <span class="input-group-addon"> Grafik(en) </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label">  Darunter Auftrags-Karten?
+                      </label>
+                      <br />
+                      <div class="col-sm-3">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Auftrag-Karten"/> Ja </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Auftrag-Karten"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label"> Ungefähre Anzahl: </label>
+                      <div class="">
+                        <div class="input-group m-b">
+                          <input name="Anzahl-Auftrag-Karten" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                          <span class="input-group-addon"> Grafik(en) </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label">  Darunter Auftrags- Grafiken (VDL/Hersteller)?
+                      </label>
+                      <br />
+                      <div class="col-sm-3">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Auftrag-Grafik"/> Ja </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Auftrag-Grafik"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label"> Ungefähre Anzahl: </label>
+                      <div class="">
+                        <div class="input-group m-b">
+                          <input name="Anzahl-Auftrag-Grafiken" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                          <span class="input-group-addon"> Grafik(en) </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label">  Darunter Autoren- bzw. Readaktions-Grafiken?
+                      </label>
+                      <br />
+                      <div class="col-sm-3">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Ja" name="Autoren-Grafik"/> Ja </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="i-checks">
+                          <div>
+                            <label class="control-label"> <input class="form-control" type="radio"  value="Nein" name="Autoren-Grafik"/> Nein </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label class=" control-label"> Ungefähre Anzahl: </label>
+                      <div class="">
+                        <div class="input-group m-b">
+                          <input name="Anzahl-Autoren-Grafik" type="number" min="0" max="100000" class="form-control" style="text-align:right;"/>
+                          <span class="input-group-addon"> Grafik(en) </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+<!---------------------------------------------------------------------------------------------------------------------->
